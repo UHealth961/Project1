@@ -1,0 +1,96 @@
+*{
+    background-color: #80DFFF;
+}
+.container{
+    border: transparent;
+    display: inline;
+    width: auto;
+    height: 500px;
+    margin-top: 230px;
+    display: flex;
+    justify-content: center;
+}
+
+.signin{
+    border: solid 1.5px white;
+    width: 45%;
+    height: 550px;
+    background-color: white;
+}
+.signup{
+    border: solid 1.5px #D5F4FF;
+    width: 55%;
+    height: 550px;
+    background-color: #D5F4FF;
+}
+.h1signin{
+    background-color: white;
+    font-size: 65px;
+    color: #999999;
+    margin-left: 14%;
+}
+.email{
+    background-color: white;
+    font-size: 30px;
+    width: 67%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 14%;
+}
+.password{
+    background-color: white;
+    font-size: 30px;
+    width: 67%;
+    margin-left: 14%;
+}
+.formsignin{
+    background-color: white;
+}
+.buttonsignin{
+    border: solid 1.5px white;
+    background-color: #00BFFF;
+    color: white;
+    font-size: 30px;
+    width: 68%;
+    height: 50px;
+    vertical-align: auto;
+    margin-top: 130px;
+    margin-left: 120px;
+}
+.h1signup{
+    background-color: #D5F4FF;
+    font-size: 65px;
+    color: white;
+    margin-left: 14%;
+}
+.psignup{
+    background-color: #D5F4FF;
+    color: #999999;
+    margin-left: 14%;
+    margin-top: 60px;
+    font-size: 30px;
+}
+.buttonsignup{
+    border: #00BFFF solid 1.5px;
+    background-color: white;
+    color: #00BFFF;
+    font-size: 30px;
+    width: 60%;
+    height: 50px;
+    vertical-align: auto;
+    margin-top: 80px;
+}
+.asignin{
+    text-align: center;
+    background-color: white;
+    color: white;
+    margin-left: 14%;
+    width: 60%;
+}
+.asignup{
+    text-align: center;
+    background-color: #D5F4FF;
+    color: #D5F4FF;
+    margin-left: 14%;
+    width: 60%;
+}

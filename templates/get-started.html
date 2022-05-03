@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='get-started.css' ) }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="signin">
+            <h1 class="h1signin">Sign In</h1>
+            <div class="formsignin">
+                <input type="email" placeholder="Email" required class="email" id="email">
+                <input type="password" placeholder="Password" required class="password" id="password"> 
+                <button class="buttonsignin" id="submitData">Sign in</button>
+            </div>
+        </div>
+
+        <div class="signup">
+            <h1 class="h1signup">Sign Up</h1>
+            <p class="psignup">Are you ready to have the best healthcare experience provided by the region's top specialists?<br><br>Sign Up to U Health now and benefit from all our services.</p>
+            <a href="sign-up.html" class="asignup"><button type="submit" class="buttonsignup"> Sign up</button></a>
+        </div>
+
+    </div>
+    
+</body>
+
+</html>
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-database.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyCyH_yQl09GfIdEKV4cPR_qtmamyPVI-zc",
+        authDomain: "u-health-f0993.firebaseapp.com",
+        projectId: "u-health-f0993",
+        storageBucket: "u-health-f0993.appspot.com",
+        messagingSenderId: "514616677564",
+        appId: "1:514616677564:web:a7deda454b0bf5a9abecb9"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+    const database = getDatabase(app);
+
+
+    submitData.addEventListener('click',(e) => {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+ //       createUserWithEmailAndPassword(auth, email, password)
+ //           .then((userCredential) => {
+ //               // Signed in 
+ //               const user = userCredential.user;
+ //               // ... user.uid
+ //               set(ref(database, 'users/' + user.uid), {
+ //                   email: email,
+ //                   password: password,
+//              })
+ //                   .then(() => {
+//                        // Data saved successfully!
+//                        alert('user created successfully');
+//                   })
+
+//                    .catch((error) => {
+//                        // The write failed...
+//                        alert(error);
+//                    });
+//            })
+//            .catch((error) => {
+//                const errorCode = error.code;
+ //               const errorMessage = error.message;
+//               // ..
+ //              alert(errorMessage);
+//           });
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+                // ...
+
+                var lgDate = new Date();
+                update(ref(database, 'users/' + user.uid), {
+                    last_login: lgDate,
+
+              })
+                    .then(() => {
+                        // Data saved successfully!
+                        alert('User logged in successfully. Press OK to continue');
+                        window.location.href="uhealth.html";
+                   })
+                    .catch((error) => {
+                        // The write failed...
+                        alert(error);
+                    });
+
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert(errorMessage);
+            });
+    });
+
+  </script>

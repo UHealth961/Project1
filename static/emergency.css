@@ -1,0 +1,143 @@
+header{
+    border: none;
+    width: 100%;
+    height: 120px;
+}
+.title{
+    color:#00BFFF;
+    font-size: 50px;
+    margin-left: 50px;
+    vertical-align: middle;
+    float: left;
+}
+nav{
+    float: right;
+    margin-top: 50px;
+    margin-right: 30px;
+}
+li a{
+    margin-right: 40px;
+    color: #999999;
+    text-decoration: none;
+}
+li a:hover{
+    color: grey;
+    text-decoration:underline;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 60px;
+    background-color: white;
+}
+li{
+    display: inline-block;
+    font-size: 25px;
+}
+.header2{
+    width: 100%;
+    height: 150px;
+    background-color: #00BFFF;
+    display: flex;
+}
+.contacttitle{
+    position: absolute;
+    width: 800px;
+    height: auto;
+    color: white;
+    font-size: 60px;
+    justify-content: flex-start;
+    align-items: center;
+    left: 60px;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #00BFFF;
+    text-decoration:underline;
+}
+.plots {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.plots2 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.plots3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.plots4 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.div1{
+    background: #AAEAFF;
+    height: 180px;
+    width: 400px;
+    margin-top: 200px;
+    border: #00BFFF 1.5px solid;
+}
+.div2{
+    background: white;
+    height: 180px;
+    width: 400px;
+    margin-top: 200px;
+    border: #00BFFF 1.5px solid;
+}
+.div3{
+    background: #AAEAFF;
+    height: 180px;
+    width: 400px;
+    margin-top: 50px;
+    border: #00BFFF 1.5px solid;
+}
+.div4{
+    background: white;
+    height: 180px;
+    width: 400px;
+    margin-top: 50px;
+    border: #00BFFF 1.5px solid;
+}
+.div5{
+    background: #AAEAFF;
+    height: 180px;
+    width: 400px;
+    margin-top: 50px;
+    border: #00BFFF 1.5px solid;
+}
+.div6{
+    background: white;
+    height: 180px;
+    width: 400px;
+    margin-top: 50px;
+    border: #00BFFF 1.5px solid;
+}
+.div7{
+    background: #AAEAFF;
+    height: 180px;
+    width: 400px;
+    margin-top: 50px;
+    border: #00BFFF 1.5px solid;
+}
+.div8{
+    background: white;
+    height: 180px;
+    width: 400px;
+    margin-top: 50px;
+    border: #00BFFF 1.5px solid;
+}

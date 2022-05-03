@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U Health</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='homepage.css' ) }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="title">U Health</h1>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="#gotoaboutus">About Us</a></li>
+                <li><a href="services.html" >Services</a></li>
+                <li><a href="specialists.html" >Specialists</a></li>
+                <li><a href="contact-us.html" >Contact Us</a></li>
+                <li><a href="get-started.html" ><img src="{{ url_for('static', filename='register.png' ) }}" width="45px" height="45px"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <intro>
+        <div>
+
+            <img src="{{ url_for('static', filename='bg-homepage.png' ) }}" alt="background" width="100%" height="700px">
+            
+            <div>
+                <h1 class="slogan" align="center">We Believe Everyone Should Have<br> Easy Access To Great HealthCare</h1>
+                <p class="pslogan" align="center">UHealth, an online-based platform dedicated to give you<br> the best healthcare solutions, wherever you are.</p>
+            </div>
+            
+            <div>
+                <a href="get-started.html" target="_blank"><h3 align="center" class="gsslogan">Get Started</h3></a>
+                <a href="services.html"><h3 align="center" class="servicesslogan">Check Our Services</h3></a>
+            </div>
+            
+            <div>
+                <div class="carre1" align="center" >
+                    <img src="{{ url_for('static', filename='carre1.png' ) }}" width="70px" height="70px" class="piccarre">
+                    <h4>Checkup</h4>
+                    <p class="pcarre" >Interact with U, our reliable bot,<br> and it will tell you exactly what you<br> are suffering from. Make sure <br>to describe your illness well!</p>
+                </div>
+                <div class="carre2" align="center">
+                    <img src="{{ url_for('static', filename='carre2.png' ) }}" width="80px" height="80px" class="piccarre">
+                    <h4>Emergency Care</h4>
+                    <p class="pcarre">Can't reach a doctor? <br>Our emergency care will give you<br> the necessary steps to take <br>care of an urgent situation.</p>
+                </div>
+                <div class="carre3" align="center">
+                    <img src="{{ url_for('static', filename='carre3.png' ) }}" width="80px" height="80px" class="piccarre">
+                    <h4>Qualified Doctors</h4>
+                    <p class="pcarre">Our top physicians will make<br> sure to treat you in the best<br> way possible. Book a checkup <br>today and the rest is on us!</p>
+                </div>
+                <div class="carre4" align="center">
+                    <img src="{{ url_for('static', filename='carre4.png' ) }}" width="80px" height="80px" class="piccarre">
+                    <h4>24 Hour Service</h4>
+                    <p class="pcarre">Our services are available 24/7. <br>Count on us and we won't <br>let you down!</p>
+                </div>
+            
+            </div>
+        </div>
+    </intro>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    <about-us class="about-us">
+        <div class="titleaboutus">
+            <h1 align="center" style="color: #D3D3D3; font-size: 45px;" id="gotoaboutus">About Us</h1>
+            <h2 align="center" style="color: #999999; font-size: 55px;">Welcome to <span style="color: #00BFFF; font-size: 55px;"> U Health</span></h2>
+            <hr class="hraboutus">
+        </div>
+        <div>
+            <p align="center" style="font-size: 25px;">In the midst of a deadly pandemic, an economic downfall and an unsteady situation, the Lebanese population<br> could use some support. Fuel prices are on the rise, and transportation has become a luxury;<br> going around is risky as the virus is spreading quickly, and the situation is hard on everyone.<br> Hence why we decided to introduce UHealth: an online-based platform dedicated to give you the best healthcare<br> solutions, wherever you are. We provide services ranging from online doctor appointments, <br>disease predictions and health advices, and a 24/7 support center. Our team consists of Myriam our scrum master, <br>Serena our product owner, Michael and Laura our skilled testers, Carelle and Lynn our professional developers.</p>
+        </div>
+    </about-us>
+
+    <br><br><br><br>
+
+    <services class="hpservices">
+        <div>
+            <img src="{{ url_for('static', filename='picture1.png' ) }}" width="700px" height="530px">
+        </div>
+        <div class="middle">
+            <h1 align="center" style="color:white; font-size:58px">Our Services</h1>
+            <p align="center" style="color:white; font-size: 24px; margin-top: 80px;">At U Health, we offer many services ranging from doctor appointments and emergency care to a 24-hour call center ready to serve you wherever you are. Our qualified doctors are the best in the region and will make sure to take care of you and your loved ones.</p>
+            <a href="services.html" ><h3 align="center" style="margin-top: 60px;" class="lmbutton">Learn more</h3></a>
+        </div>
+        <div>
+            <img src="{{ url_for('static', filename='picture2.png' ) }}" width="653px" height="530px">
+        </div>
+    </services>
+
+    <br><br><br><br>
+
+    <footer>
+        <div class="titrefooter">
+            <h1 class="h1footer">U Health</h1>
+        </div>
+
+        <div>
+            <a href="https://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.twitter.com" class="fa fa-twitter" target="_blank"></a>
+            <a href="https://www.instagram.com/uhealth961?igshid=YmMyMTA2M2Y=" target="_blank" class="fa fa-instagram"></a>
+            <a href="https://www.linkedin.com" target="_blank" class="fa fa-linkedin"></a> 
+            <a href="https://www.youtube.com" target="_blank" class="fa fa-youtube"></a> 
+            <a href="mailto:uhealth961@gmail.com" target="_blank" class="fa fa-google"></a>
+            <a href="tel:+96176898258" target="_blank" class="fa fa-phone"></a>
+        </div>
+        <div>
+            <p align="center" style="font-size: 20px; color: gray;">USJ - ESIB<br>Mar Roukoz Street<br>Mar Roukouz Et Dahr El Hssaine Mount Lebanon, 22245</p>
+            <p align="center"><em>&copy; Copyright 2022 UHealth</em></p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <div class="calculator">
+
+        <input type="text" class="display" disabled>
+        <div class="keys">
+            <div class="row">
+                <div class="t0">
+                    <label style="background-color:#00BFFF;">Gender</label>
+                    <br>
+                    <input type="radio" name="fgender" class="fgender" value="male" id="myradio" checked> Male
+                    <input type="radio" class="fgender" name="fgender" value="female" id="myradio"> Female<br>
+                </div>
+                <div id="result"></div>
+            </div>
+            <div class="row">
+                <div class="t1">
+                    <p  style="background-color:#00BFFF;">Age (in Years)</p>
+                </div>
+                <input type="number" id="age" placeholder="Age" class="box1">
+            </div>
+            <div class="row">
+                <div class="t">
+                    <p style="background-color:#00BFFF;">Weight (in Kg)</p>
+                </div>
+                <input type="number" id=weight placeholder="Weight" class="box">
+            </div>
+            <div class="row">
+                <div class="t2">
+                    <p style="background-color:#00BFFF;">Height (in Cm)</p>
+                </div>
+                <input type="number" id=height placeholder="Height" class="box2">
+            </div>
+            <div class="row">
+                <div class="t4">
+                    <table id="mytable">
+                        <thead>
+                            <tr>
+                                <th>Activity Level</th>
+                                <th>Calories</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sedentary (little or no exercise)</td>
+                                <td><input type="text" class="display1" disabled></td>
+                            </tr>
+                            <tr>
+                                <td>Lightly active (light exercise or sports 1-3 days/week)</td>
+                                <td><input type="text" class="display2" disabled></td>
+                            </tr>
+                            <tr>
+                                <td>Moderately active (moderate exercise 3-5 days/week)</td>
+                                <td><input type="text" class="display3" disabled></td>
+                            </tr>
+                            <tr>
+                                <td>Very active (hard exercise 6-7 days/week)</td>
+                                <td><input type="text" class="display4" disabled></td>
+                            </tr>
+                            <tr>
+                                <td>Super active (very hard exercise and a physical job)</td>
+                                <td><input type="text" class="display5" disabled></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="b1">
+                    <button value="calculate" class="calculate">Calculate</button>
+                </div>
+            </div>
+
+            <div>
+                <h1 class="h1">BMR Calculator</h1>
+                <p class="def">
+                    Basal Metabolic Rate<br>
+                    Even when resting, your body burns calories by performing basic functions to sustain life, such as: breathing, circulation,
+                    nutrient processing, cell production.<br><br>
+                    Basal metabolic rate is the number of calories your body needs to accomplish its most basic (basal) life-sustaining functions.<br><br>
+                    Why you might want to know your BMR:
+                    Your BMR can be used to help you gain, lose, or maintain your weight. By knowing how many calories you burn, you can know how many to consume. To put it simply:<br>
+                    Is your goal to maintain your weight? Consume the same number of calories that you burn.<br>
+                    Is your goal to gain weight? Consume more calories than you burn.<br>
+                    Is your goal to lose weight? Consume fewer calories than you burn.<br>
+                    How you can change your BMR:<br>
+                    Your BMR is determined by a number of factors, including: sex, weight, height, age, ethnicity, weight history, body composition,
+                    genetic factors.
+                    Of these factors, you can take steps to change your weight and body composition. So if you want to change your BMR, your first steps should be to lose weight and increase muscle.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+<style>
+*{
+    background-color: #D5F4FF;
+}
+.calculator{
+        width: 100%;
+        height: 600px;
+        background-color: #00BFFF;
+        position: absolute;
+        top: 150px;
+        z-index: -2;
+    }
+.t0{
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    background-color: #00BFFF;
+}
+.row{
+    background-color: #00BFFF;
+}
+.t1{
+    font-size: 20px;
+    position: absolute;
+    top: 70px;
+    left: 60px;
+    background-color: #00BFFF;
+}
+.box1{
+    font-size: 20px;
+    position: absolute;
+    top: 87px;
+    left: 210px;
+    background-color: white;
+}
+.t{
+    font-size: 20px;
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    background-color: #00BFFF;
+}
+.box{
+    font-size: 20px;
+    position: absolute;
+    top: 140px;
+    left: 210px;
+    background-color: white;
+}
+.t2{
+    font-size: 20px;
+    position: absolute;
+    top: 170px;
+    left: 60px;
+    background-color: #00BFFF;
+}
+.box2{
+    font-size: 20px;
+    position: absolute;
+    top: 190px;
+    left: 210px;
+    background-color: white;
+}
+table,th,td {
+        border: 1px solid rgb(253, 251, 251);
+        background-color: #00BFFF;
+        
+    }
+#mytable{
+    position: absolute;
+    top: 280px;
+    left: 60px;
+    font-size: 20px;
+}
+.calculate{
+        width: 300px;
+        height: 60px;
+        background-color: transparent;
+        border: 1.5px solid black;
+        color: black;
+        position: absolute;
+        top: 500px;
+        left: 60px;
+        font-size: 26px;
+    }
+    .display {
+        background-color: #00BFFF;
+        color: black;
+        border: none;
+        text-align: center;
+        font-size: 40px;
+        position: absolute;
+        top: 510px;
+        left: 310px;
+    }
+    .display1 {
+        background-color: white;
+        color: black;
+        border: none;
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    .display2 {
+        background-color: white;
+        color: black;
+        border: none;
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    .display3 {
+        background-color: white;
+        color: black;
+        border: none;
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    .display4 {
+        background-color: white;
+        color: black;
+        border: none;
+        text-align: center;
+        font-size: 15px;
+    }
+    
+    .display5 {
+        background-color: white;
+        color: black;
+        border: none;
+        text-align: center;
+        font-size: 15px;
+    }
+    .def{
+        font-size: 22px;
+        color: white;
+        background-color: #00BFFF;
+        position: absolute;
+        top: 100px;
+        left: 1000px;
+    }
+    .h1{
+        font-size: 60px;
+        position: absolute;
+        top: 0px;
+        right: 300px;
+        background-color: #00BFFF;
+        color: white;
+    }
+</style>
+
+
+
+<script>
+    const buttons = document.querySelectorAll('button');
+
+    const display = document.querySelector('.display');
+
+    const display1 = document.querySelector('.display1');
+
+    const display2 = document.querySelector('.display2');
+
+    const display3 = document.querySelector('.display3');
+
+    const display4 = document.querySelector('.display4');
+
+    const display5 = document.querySelector('.display5');
+
+
+
+    buttons.forEach(function(button) {
+        button.addEventListener('click', calculate);
+    });
+
+
+    function calculate() {
+        let gender = document.getElementById("myradio").value;
+
+        let age = document.getElementById('age').value;
+
+        let weight = document.getElementById('weight').value;
+
+        let height = document.getElementById('height').value;
+
+        let bmr = ''
+
+        if (gender == 'male') {
+            bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+            display.value = `Your BMR is : ${bmr}`;
+        } else {
+            bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+            display.value = `Your BMR is : ${bmr}`;
+
+        }
+        display1.value = 1.2 * bmr.toFixed(2);
+        display2.value = 1.375 * bmr.toFixed(2);
+        display3.value = 1.55 * bmr.toFixed(2);
+        display4.value = 1.725 * bmr.toFixed(2);
+        display5.value = 1.9 * bmr.toFixed(2);
+
+    }
+</script>
+
+</html>

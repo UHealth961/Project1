@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='symptoms.css') }}">
+    <link rel="stylesheet" href="symptoms.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="title">U Health</h1>
+        <nav>
+            <ul>
+                <li><a href="uhealth.html">Home</a></li>
+                <li><a href="contact-us2.html" >Contact Us</a></li>
+                <li><a href="homepage.html" ><img src="{{ url_for('static', filename='logout.png' ) }}" width="45px" height="45px"></a></li>
+                
+            </ul>
+        </nav>
+        <hr width="100%;" color="#00BFFF" size="2">
+    </header>
+
+    <div>
+        <img src="{{ url_for('static', filename='robot.png' ) }}" alt="TechCrunch" class="robot" width="35%">
+        <div>
+            <h1 class="title2" align="center">Hey, what are your main complaints? Please check all your symptoms for me to give you a medical assessment using Artificial Intelligence.</h1>
+        </div>
+    </div>
+
+    <form action="/" method="POST">
+        <div class="form1">
+            <input type="checkbox" id="Itching" name="my_checkbox" value="Itching">
+            <label for="Itching"> Itching</label><br>
+            <input type="checkbox" id="Skin Rash" name="my_checkbox" value="Skin Rash">
+            <label for="Skin Rash"> Skin Rash</label><br>
+            <input type="checkbox" id="Continuous Sneezing" name="my_checkbox" value="Continuous Sneezing">
+            <label for="Continuous Sneezing"> Continuous Sneezing</label><br>
+            <input type="checkbox" id="Shivering" name="my_checkbox" value="Shivering">
+            <label for="Shivering"> Shivering</label><br>
+            <input type="checkbox" id="Chills" name="my_checkbox" value="Chills">
+            <label for="Chills"> Chills</label><br>
+            <input type="checkbox" id="Joint Pain" name="my_checkbox" value="Joint Pain">
+            <label for="Joint Pain"> Joint Pain</label><br>
+            <input type="checkbox" id="Stomach Pain" name="my_checkbox" value="Stomach Pain">
+            <label for="Stomach Pain"> Stomach Pain</label><br>
+            <input type="checkbox" id="Acidity" name="my_checkbox" value="Acidity">
+            <label for="Acidity"> Acidity</label><br>
+            <input type="checkbox" id="Ulcers on Tongue" name="my_checkbox" value="Ulcers On Tongue">
+            <label for="Ulcers on Tongue"> Ulcers on Tongue</label><br>
+            <input type="checkbox" id="Muscle Wasting" name="my_checkbox" value="Muscle Wasting">
+            <label for="Muscle Wasting"> Muscle Wasting</label><br>
+            <input type="checkbox" id="Vomiting" name="my_checkbox" value="Vomiting">
+            <label for="Vomiting"> Vomiting</label><br>
+            <input type="checkbox" id="Burning Micturition" name="my_checkbox" value="Burning Micturition">
+            <label for="Burning Micturition"> Burning Micturition</label><br>
+            <input type="checkbox" id="Spotting Urination" name="my_checkbox" value="Spotting Urination">
+            <label for="Spotting Urination"> Spotting Urination</label><br>
+            <input type="checkbox" id="Fatigue" name="my_checkbox" value="Fatigue">
+            <label for="Fatigue"> Fatigue</label><br>
+            <input type="checkbox" id="Weight Gain" name="my_checkbox" value="Weight Gain">
+            <label for="Weight Gain"> Weight Gain</label><br>
+            <input type="checkbox" id="Anxiety" name="my_checkbox" value="Anxiety">
+            <label for="Anxiety"> Anxiety</label><br>
+            <input type="checkbox" id="Cold hands and feets" name="my_checkbox" value="Cold Hands And Feets">
+            <label for="Cold hands and feets"> Cold hands and feets</label><br>
+            <input type="checkbox" id="Mood Swings" name="my_checkbox" value="Mood Swings">
+            <label for="Mood Swings"> Mood Swings</label><br>
+            <input type="checkbox" id="Weight Loss" name="my_checkbox" value="Weight Loss">
+            <label for="Weight Loss"> Weight Loss</label><br>
+            <input type="checkbox" id="Restlessness" name="my_checkbox" value="Restlessness">
+            <label for="Restlessness"> Restlessness</label><br>
+            <input type="checkbox" id="Lethargy" name="my_checkbox" value="Lethargy">
+            <label for="Lethargy"> Lethargy</label><br>
+            <input type="checkbox" id="Loss of smell" name="my_checkbox" value="Loss Of Smell">
+            <label for="Loss of smell">Loss of smell</label><br>
+            <input type="checkbox" id="Bladder discomfort" name="my_checkbox" value="Bladder Discomfort">
+            <label for="Bladder discomfort">Bladder discomfort</label><br>
+            <input type="checkbox" id="Cramps" name="my_checkbox" value="Cramps">
+            <label for="Cramps">Cramps</label><br>
+            <input type="checkbox" id="Watering from eyes" name="my_checkbox" value="Watering From Eyes">
+            <label for="Watering from eyes"> Watering from eyes</label><br>
+            <input type="checkbox" id="Increased appetite" name="my_checkbox" value="Increased Appetite">
+            <label for="Increased appetite">Increased appetite</label><br>
+            <input type="checkbox" id="Polyuria" name="my_checkbox" value="Polyuria">
+            <label for="Polyuria">Polyuria</label><br>
+            <input type="checkbox" id="Mucoid Sputum" name="my_checkbox" value="Mucoid Sputum">
+            <label for="Mucoid Sputum">Mucoid Sputum</label><br>
+            <input type="checkbox" id="Rusty Sputum" name="my_checkbox" value="Rusty Sputum">
+            <label for="Rusty Sputum">Rusty Sputum</label><br>
+            <input type="checkbox" id="Inflammatory nails" name="my_checkbox" value="Inflammatory Nails">
+            <label for="Inflammatory nails">Inflammatory nails</label><br>
+        </div>
+        <div class="form2">
+            <input type="checkbox" id="Patches in throat" name="my_checkbox" value="Patches In Throat">
+            <label for="Patches in throat">Patches in throat</label><br>
+            <input type="checkbox" id="Irregular sugar level" name="my_checkbox" value="Irregular Sugar Level">
+            <label for="Irregular sugar level"> Irregular sugar level</label><br>
+            <input type="checkbox" id="Cough" name="my_checkbox" value="Cough">
+            <label for="Cough">Cough</label><br>
+            <input type="checkbox" id="High fever" name="my_checkbox" value="High Fever">
+            <label for="High fever"> High fever</label><br>
+            <input type="checkbox" id="Sunken eyes" name="my_checkbox" value="Sunken Eyes">
+            <label for="Sunken eyes"> Sunken eyes</label><br>
+            <input type="checkbox" id="Breathlessness" name="my_checkbox" value="Breathlessness">
+            <label for="Breathlessness"> Breathlessness</label><br>
+            <input type="checkbox" id="Sweating" name="my_checkbox" value="Sweating">
+            <label for="Sweating"> Sweating</label><br>
+            <input type="checkbox" id="Dehydration" name="my_checkbox" value="Dehydration">
+            <label for="Dehydration">Dehydration</label><br>
+            <input type="checkbox" id="Indigestion" name="my_checkbox" value="Indigestion">
+            <label for="Indigestion">Indigestion</label><br>
+            <input type="checkbox" id="Headache" name="my_checkbox" value="Headache">
+            <label for="Headache"> Headache</label><br>
+            <input type="checkbox" id="Yellowish Skin" name="my_checkbox" value="Yellowish Skin">
+            <label for="Yellowish Skin"> Yellowish Skin</label><br>
+            <input type="checkbox" id="Dark Urine" name="my_checkbox" value="Dark Urine">
+            <label for="Dark Urine">Dark Urine</label><br>
+            <input type="checkbox" id="Nausea" name="my_checkbox" value="Nausea">
+            <label for="Nausea">Nausea</label><br>
+            <input type="checkbox" id="Loss of appetite" name="my_checkbox" value="Loss Of Appetite">
+            <label for="Loss of appetite"> Loss of appetite</label><br>
+            <input type="checkbox" id="Pain behind the eyes" name="my_checkbox" value="Pain Behind The Eyes">
+            <label for="Pain behind the eyes"> Pain behind the eyes</label><br>
+            <input type="checkbox" id="Back pain" name="my_checkbox" value="Back Pain">
+            <label for="Back pain"> Back pain</label><br>
+            <input type="checkbox" id="Constipation" name="my_checkbox" value="Constipation">
+            <label for="Constipation"> Constipation</label><br>
+            <input type="checkbox" id="Abdominal pain" name="my_checkbox" value="Abdominal Pain">
+            <label for="Abdominal pain">Abdominal pain</label><br>
+            <input type="checkbox" id="Diarrhea" name="my_checkbox" value="Diarrhea">
+            <label for="Diarrhea">Diarrhea</label><br>
+            <input type="checkbox" id="Mild fever" name="my_checkbox" value="Mild Fever">
+            <label for="Mild fever"> Mild fever</label><br>
+            <input type="checkbox" id="Yellow urine" name="my_checkbox" value="Yellow Urine">
+            <label for="Yellow urine"> Yellow urine</label><br>
+            <input type="checkbox" id="Red spots over body" name="my_checkbox" value="Red Spots Over Body">
+            <label for="Red spots over body">Red spots over body</label><br>
+            <input type="checkbox" id="Belly pain" name="my_checkbox" value="Belly Pain">
+            <label for="Belly pain">Belly pain</label><br>
+            <input type="checkbox" id="Abnormal menstruation" name="my_checkbox" value="Abnormal Menstruation">
+            <label for="Abnormal menstruation">Abnormal menstruation</label><br>
+            <input type="checkbox" id="Lack of concentration" name="my_checkbox" value="Lack Of Concentration">
+            <label for="Lack of concentration"> Lack of concentration</label><br>
+            <input type="checkbox" id="Visual disturbances" name="my_checkbox" value="Visual Disturbances">
+            <label for="Visual disturbances">Visual disturbances</label><br>
+            <input type="checkbox" id="Receiving blood transfusion" name="my_checkbox" value="Receiving Blood Transfusion">
+            <label for="Receiving blood transfusion">Receiving blood transfusion</label><br>
+            <input type="checkbox" id="Recieving unsterile injections" name="my_checkbox" value="Receiving Unsterile Injections">
+            <label for="Receiving unsterile injections">Receiving unsterile injections</label><br>
+            <input type="checkbox" id="Stomach Bleeding" name="my_checkbox" value="Stomach Bleeding">
+            <label for="Stomach Bleeding">Stomach Bleeding</label><br>
+            <input type="checkbox" id="Red sore around nose" name="my_checkbox" value="Red Sore Around Nose">
+            <label for="Red sore around nose"> Red sore around nose</label><br>
+        </div>
+        <div class="form3">
+            <input type="checkbox" id="Yellowing of eyes" name="my_checkbox" value="Yellowing Of Eyes">
+            <label for="Yellowing of eyes">Yellowing of eyes</label><br>
+            <input type="checkbox" id="Fluid overload" name="my_checkbox" value="Fluid Overload">
+            <label for="Fluid overload"> Fluid overload</label><br>
+            <input type="checkbox" id="Swelling of Stomach" name="my_checkbox" value="Swelling Of Stomach">
+            <label for="Swelling of Stomach">Swelling of Stomach</label><br>
+            <input type="checkbox" id="Swelled lymph nodes" name="my_checkbox" value="Swelled Lymph Nodes">
+            <label for="Swelled lymph nodes">Swelled lymph nodes</label><br>
+            <input type="checkbox" id="Malaise" name="my_checkbox" value="Malaise">
+            <label for="Malaise">Malaise</label><br>
+            <input type="checkbox" id="Blurred and distorted vision" name="my_checkbox" value="Blurred And Distorted Vision">
+            <label for="Blurred and distorted vision"> Blurred and distorted vision</label><br>
+            <input type="checkbox" id="Phlegm" name="my_checkbox" value="Phlegm">
+            <label for="Phlegm">Phlegm</label><br>
+            <input type="checkbox" id="Throat irritation" name="my_checkbox" value="Throat Irritation">
+            <label for="Throat irritation"> Throat irritation</label><br>
+            <input type="checkbox" id="Redness of eyes" name="my_checkbox" value="Redness Of Eyes">
+            <label for="Redness of eyes">Redness of eyes</label><br>
+            <input type="checkbox" id="Sinus pressure" name="my_checkbox" value="Sinus Pressure">
+            <label for="Sinus pressure">Sinus pressure</label><br>
+            <input type="checkbox" id="Runny nose" name="my_checkbox" value="Runny Nose">
+            <label for="Runny nose">Runny nose</label><br>
+            <input type="checkbox" id="Congestion" name="my_checkbox" value="Congestion">
+            <label for="Congestion"> Congestion</label><br>
+            <input type="checkbox" id="Chest pain" name="my_checkbox" value="Chest Pain">
+            <label for="Chest pain">Chest pain</label><br>
+            <input type="checkbox" id="Weakness in limbs" name="my_checkbox" value="Weakness In Limbs">
+            <label for="Weakness in limbs">Weakness in limbs</label><br>
+            <input type="checkbox" id="Fast heart rate" name="my_checkbox" value="Fast Heart Rate">
+            <label for="Fast heart rate">Fast heart rate</label><br>
+            <input type="checkbox" id="Pain during bowel movements" name="my_checkbox" value="Pain During Bowel Movements">
+            <label for="Pain during bowel movements">Pain during bowel movements</label><br>
+            <input type="checkbox" id="Pain in anal region" name="my_checkbox" value="Pain In Anal Region">
+            <label for="Pain in anal region">Pain in anal region</label><br>
+            <input type="checkbox" id="Bloody stool" name="my_checkbox" value="Bloody Stool">
+            <label for="Bloody stool"> Bloody stool</label><br>
+            <input type="checkbox" id="Irritation in anus" name="my_checkbox" value="Irritation In Anus">
+            <label for="Irritation in anus">Irritation in anus</label><br>
+            <input type="checkbox" id="Neck pain" name="my_checkbox" value="Neck Pain">
+            <label for="Neck pain">Neck pain</label><br>
+            <input type="checkbox" id="Dizziness" name="my_checkbox" value="Dizziness">
+            <label for="Dizziness">Dizziness</label><br>
+            <input type="checkbox" id="Continuous feel of urine" name="my_checkbox" value="Continuous Feel Of Urine">
+            <label for="Continuous feel of urine">Continuous feel of urine</label><br>
+            <input type="checkbox" id="Passage of gases" name="my_checkbox" value="Passage Of Gases">
+            <label for="Passage of gases">Passage of gases</label><br>
+            <input type="checkbox" id="Depression" name="my_checkbox" value="Depression">
+            <label for="Depression">Depression</label><br>
+            <input type="checkbox" id="Distention of abdomen" name="my_checkbox" value="Distention Of Abdomen">
+            <label for="Distention of abdomen"> Distention of abdomen</label><br>
+            <input type="checkbox" id="History of alcohol consumption" name="my_checkbox" value="History Of Alcohol Consumption">
+            <label for="History of alcohol consumption">History of alcohol consumption</label><br>
+            <input type="checkbox" id="Blood in sputum" name="my_checkbox" value="Blood In Sputum">
+            <label for="Blood in sputum">Blood in sputum</label><br>
+            <input type="checkbox" id="Prominent veins on calf" name="my_checkbox" value="Prominent Veins On Calf">
+            <label for="Prominent veins on calf">Prominent veins on calf</label><br>
+            <input type="checkbox" id="Palpitations" name="my_checkbox" value="Palpitations">
+            <label for="Palpitations">Palpitations</label><br>
+            <input type="checkbox" id="Blister" name="my_checkbox" value="Blister">
+            <label for="Blister"> Blister</label><br>
+        </div>
+        <div class="form4">
+            <input type="checkbox" id="Bruising" name="my_checkbox" value="Bruising">
+            <label for="Bruising">Bruising</label><br>
+            <input type="checkbox" id="Obesity" name="my_checkbox" value="Obesity">
+            <label for="Obesity"> Obesity</label><br>
+            <input type="checkbox" id="Swollen legs" name="my_checkbox" value="Swollen Legs">
+            <label for="Swollen legs">Swollen legs</label><br>
+            <input type="checkbox" id="Swollen blood vessels" name="my_checkbox" value="Swollen Blood Vessels">
+            <label for="Swollen blood vessels">Swollen blood vessels</label><br>
+            <input type="checkbox" id="Puffy face and eyes" name="my_checkbox" value="Puffy Face And Eyes">
+            <label for="Puffy face and eyes">Puffy face and eyes</label><br>
+            <input type="checkbox" id="Enlarged thyroid" name="my_checkbox" value="Enlarged Thyroid">
+            <label for="Enlarged thyroid">Enlarged thyroid</label><br>
+            <input type="checkbox" id="Brittle nails" name="my_checkbox" value="Brittle Nails">
+            <label for="Brittle nails">Brittle nails</label><br>
+            <input type="checkbox" id="Swollen extremeties" name="my_checkbox" value="Swollen Extremeties">
+            <label for="Swollen extremeties"> Swollen extremeties</label><br>
+            <input type="checkbox" id="Excessive hunger" name="my_checkbox" value="Excessive Hunger">
+            <label for="Excessive hunger">Excessive hunger</label><br>
+            <input type="checkbox" id="Dry lips" name="my_checkbox" value="Drying And Tingling Lips">
+            <label for="Dry lips"> Dry lips</label><br>
+            <input type="checkbox" id="Slurred speech" name="my_checkbox" value="Slurred Speech">
+            <label for="Slurred speech">Slurred speech</label><br>
+            <input type="checkbox" id="Knee pain" name="my_checkbox" value="Knee Pain">
+            <label for="Knee pain">Knee pain</label><br>
+            <input type="checkbox" id="Hip joint pain" name="my_checkbox" value="Hip Joint Pain">
+            <label for="Hip joint pain">Hip joint pain</label><br>
+            <input type="checkbox" id="Muscle weakness" name="my_checkbox" value="Muscle Weakness">
+            <label for="Muscle weakness">Muscle weakness</label><br>
+            <input type="checkbox" id="Stiff neck" name="my_checkbox" value="Stiff Neck">
+            <label for="Stiff neck">Stiff neck</label><br>
+            <input type="checkbox" id="Swelling joints" name="my_checkbox" value="Swelling Joints">
+            <label for="Swelling joints"> Swelling joints</label><br>
+            <input type="checkbox" id="Movement stiffness" name="my_checkbox" value="Movement Stiffness">
+            <label for="Movement stiffness"> Movement stiffness</label><br>
+            <input type="checkbox" id="Loss of balance" name="my_checkbox" value="Loss Of Balance">
+            <label for="Loss of balance">Loss of balance</label><br>
+            <input type="checkbox" id="Unsteadiness" name="my_checkbox" value="Unsteadiness">
+            <label for="Unsteadiness">Unsteadiness</label><br>
+            <input type="checkbox" id="Irritability" name="my_checkbox" value="Irritability">
+            <label for="Irritability">Irritability</label><br>
+            <input type="checkbox" id="Muscle pain" name="my_checkbox" value="Muscle Pain">
+            <label for="Muscle pain"> Muscle pain</label><br>
+            <input type="checkbox" id="Altered sensorium" name="my_checkbox" value="Altered Sensorium">
+            <label for="Altered sensorium">Altered sensorium</label><br>
+            <input type="checkbox" id="Painful walking" name="my_checkbox" value="Painful Walking">
+            <label for="Painful walking"> Painful walking</label><br>
+            <input type="checkbox" id="Pus filled pimples" name="my_checkbox" value="Pus Filled Pimples">
+            <label for="Pus filled pimples">Pus filled pimples</label><br>
+            <input type="checkbox" id="Blackheads" name="my_checkbox" value="Blackheads">
+            <label for="Blackheads">Blackheads</label><br>
+            <input type="checkbox" id="Skin peeling" name="my_checkbox" value="Skin Peeling">
+            <label for="Skin peeling"> Skin peeling</label><br>
+            <input type="checkbox" id="Small dents in nails" name="my_checkbox" value="Small Dents In Nails">
+            <label for="Small dents in nails">Small dents in nails</label><br>
+            <input type="checkbox" id="Weakness of one body side" name="my_checkbox" value="Weakness Of One Body Side">
+            <label for="Weakness of one body side">Weakness of one body side</label><br>
+        </div>
+        <input type="submit" value="Submit" class="submit">
+    </form>
+
+
+<p class="prediction"><h2>Your predicted disease is : {{my_disease}}</h2> <br>Please note that this is not a medical diagnosis. <br>It is best if you contact a medical professional if these symptoms persist.</p>
+</body>
+
+</html>

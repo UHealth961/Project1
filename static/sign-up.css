@@ -1,0 +1,146 @@
+*{
+    background-color: #80DFFF;
+}
+.container{
+    border: transparent;
+    display: inline;
+    width: auto;
+    height: 500px;
+    margin-top: 230px;
+    display: flex;
+    justify-content: center;
+}
+.left{
+    border: solid 1.5px #D5F4FF;
+    width: 45%;
+    height: 550px;
+    background-color: #D5F4FF;
+}
+.right{
+    border: solid 1.5px white;
+    width: 55%;
+    height: 550px;
+    background-color: white;
+}
+.h1signup{
+    background-color: #D5F4FF;
+    color: white;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 110px;
+}
+.h2signup{
+    background-color: #D5F4FF;
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    vertical-align:middle
+}
+.psignup{
+    background-color: #D5F4FF;
+    color: #999999;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 80px;
+}
+form{
+    background-color: white;
+}
+
+#firstname{
+    background-color: white;
+    padding: 10px 120px;
+    margin-top: 30px;
+    margin-left: 85px;
+    text-align: center;
+    
+}
+#lastname{
+    background-color: white;
+    padding: 10px 120px;
+    margin-top: 30px;
+    margin-left: 5px;
+    text-align: center;
+}
+.form-control{
+    background-color: white;
+    padding: 10px 330px;
+    margin-left: 85px;
+    margin-top: 20px;
+    text-align: center;
+}
+.dob{
+    background-color: white;
+    padding: 10px 355px;
+    margin-left: 85px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#poids{
+    background-color: white;
+    padding: 10px 120px;
+    margin-top: 20px;
+    margin-left: 85px;
+    text-align: center;
+    
+}
+#taille{
+    background-color: white;
+    padding: 10px 120px;
+    margin-top: 20px;
+    margin-left: 5px;
+    text-align: center;
+}
+#country{
+    background-color: white;
+    padding: 5px 57px 5px 57px;
+    margin-top: 20px;
+    margin-left: 85px;
+    text-align: center; 
+    display: flex; 
+}
+#gender{
+    background-color: white;
+    padding: 5px 158px 5px 158px;
+    margin-top: 20px;
+    margin-left: 10px;
+    text-align: center;  
+}
+.divselect{
+    background-color: white;
+    display: flex;
+    
+}
+.select{
+    background-color: white;
+    color: #999999;
+    margin-top: 20px;
+    margin-left: 85px;
+    font-size: 20px;
+}
+.tandc{
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 85px;
+    color: #999999;
+    font-size: 18px;
+}
+.divcreate{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.create{
+    margin-top: 30px;
+    background-color: #00BFFF;
+    color: white;
+    border: 1.5px solid #00BFFF;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    position: absolute;
+    top: 685px;
+    left: 1220px;
+}
+

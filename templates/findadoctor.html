@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Doctor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='findadoctor.css' ) }}">
+</head>
+
+<body>
+    <header>
+        <h1 class="title">U Health</h1>
+        <nav>
+            <ul>
+                <li><a href="uhealth.html">Home</a></li>
+                <li><a href="contact-us2.html" >Contact Us</a></li>
+                <li><a href="homepage.html" ><img src="{{ url_for('static', filename='logout.png' ) }}" width="45px" height="45px"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="header2">
+        <h1 class="specialiststitle">Find A Doctor</h1>
+    </div>
+    <br><br>
+
+    <div>
+       
+        <br><br>
+
+        <form>
+            <input type="text" placeholder="First Name" class="firstname">
+            <input type="text" placeholder="Last Name" class="lastname">
+            <select class="select">
+                <option value="" disabled selected>Specialty</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Cardiovascular Surgery">Cardiovascular Surgery</option>
+                <option value="Dermatalogy">Dermatalogy</option>
+                <option value="Emergency">Emergency</option>
+                <option value="General Surgery">General Surgery</option>
+                <option value="Infectious Diseases">Infectious Diseases</option>
+                <option value="Laboratory">Laboratory</option>
+                <option value="Neuro Surgery">Neuro Surgery</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Ophtalmology">Ophtalmology</option>
+                <option value="ORL">ORL</option>
+                <option value="Orthopedics Surgery">Orthopedics Surgery</option>
+                <option value="Pediatric Surgery">Pediatric Surgery</option>
+                <option value="Plastics Surgery">Plastics Surgery</option>
+                <option value="Pediatrics">Pediatrics</option>
+                <option value="Psychiatry">Psychiatry</option>
+                <option value="Radio-oncology">Radio-oncology</option>
+                <option value="Rhumatology">Rhumatology</option>
+                <option value="Urology">Urology</option>
+                
+            </select>
+            <a href="">
+                <button type="submit" class="search">Search</button>
+            </a>
+        </form>
+
+    </div>
+</body>
+
+</html>

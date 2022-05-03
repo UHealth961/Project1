@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact-us2.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1 class="title">U Health</h1>
+        <nav>
+            <ul>
+                <li><a href="uhealth.html">Home</a></li>
+                <li><a href="contact-us2.html" >Contact Us</a></li>
+                <li><a href="homepage.html" ><img src="{{ url_for('static', filename='logout.png' ) }}" width="45px" height="45px"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="header2">
+        <h1 class="contacttitle">Contact Us</h1>
+    </div>
+
+    <br>
+    <div class="container">
+        <img src="{{ url_for('static', filename='contact.jpg' ) }}" width="55%" height="660px">
+        <div>
+            <h1 class="h1contact" align="center">We'd Love To Hear From You</h1>
+            <h3 class="h3contact" align="center">Drop us a line, or give us a heads up if you're interested in visiting us.</h3>
+            <form onsubmit="sendEmail(); reset(); notification();">
+                <input type="text" placeholder="First name" id="firstname">
+                <input type="text" placeholder="Last name" id="lastname">
+                <input type="email" placeholder="Email" id="email">
+                <input type="text" placeholder="Your message" id="message">
+                <button type="submit" class="send"> Send</button>
+            </form>
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail(){
+                Email.send({
+                    Host : "smtp.gmail.com",
+                    Username : "uhealth961@gmail.com",
+                    Password : "jnsjecdikyenrvzc",
+                    To : "uhealth961@gmail.com",
+                    From : document.getElementById("email").value,
+                    Subject : "New contact form message",
+                    Body : "First name: " + document.getElementById("firstname").value + "<br>" + "Last name: " + document.getElementById("lastname").value + "<br>" + "Email: " + document.getElementById("email").value + "<br>" + "Message: " + document.getElementById("message").value
+                }).then(
+                message => alert(message)
+                )
+                            }
+            function notification(){
+                window.alert("Your message has been sent successfully");
+            }
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U Health</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='uhealth.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="title">U Health</h1>
+        <nav>
+            <ul>
+                <li><a href="uhealth.html">Home</a></li>
+                <li><a href="contact-us2.html" >Contact Us</a></li>
+                <li><a href="homepage.html" ><img src="{{ url_for('static', filename='logout.png') }}" width="45px" height="45px"></a></li>
+            </ul>
+        </nav>
+        <hr width="100%;" color="#00BFFF" size="2">
+    </header>
+
+    <div>
+        <img src="{{ url_for('static', filename='robot.png') }}" class="robot" width="750px" height="600px">
+        <div>
+            <h1 class="title2">Welcome to U Health!</h1>
+            <h3 class="title3" align="center">Hey, I'm U, your health pal! <br> How can I help you?</h3>
+        </div>
+    </div>
+
+    <div>
+        <div class="carre1" align="center" >
+            <img src="{{ url_for('static', filename='register.png') }}" width="70px" height="70px" class="piccarre">
+            <a href="myprofile.html" class="a"><h4>My Profile</h4></a>
+        </div>
+        <div class="carre2" align="center">
+            <img src="{{ url_for('static', filename='doctor.png') }}" width="80px" height="80px" class="piccarre">
+            <a href="findadoctor.html" class="a"><h4>Find A Doctor</h4></a>
+        </div>
+        <div class="carre3" align="center">
+            <img src="{{ url_for('static', filename='virus.png') }}" width="80px" height="80px" class="piccarre">
+            <a href="diseasepredictor.html" class="a"><h4>Disease Predictor</h4></a>
+        </div>
+        <div class="carre4" align="center">
+            <img src="{{ url_for('static', filename='spreadsheets.png') }}" width="80px" height="80px" class="piccarre">
+            <a href="calculators.html" class="a"><h4>Health Calculators</h4></a>
+        </div>
+        <div class="carre5" align="center">
+            <img src="{{ url_for('static', filename='ambulance.png') }}" width="80px" height="80px" class="piccarre">
+            <a href="emergency.html" class="a"><h4>Emergency Tutorials</h4></a>
+        </div>
+    
+    </div>
+    
+</body>
+
+</html>

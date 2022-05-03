@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Calculators</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='calculators.css' ) }}">
+</head>
+
+<body>
+    <header>
+        <h1 class="title">U Health</h1>
+        <nav>
+            <ul>
+                <li><a href="uhealth.html">Home</a></li>
+                <li><a href="contact-us2.html" >Contact Us</a></li>
+                <li><a href="homepage.html" ><img src="{{ url_for('static', filename='logout.png' ) }}" width="45px" height="45px"></a></li>
+            </ul>
+        </nav>
+        <div class="header2">
+            <h1 class="contacttitle">Health Calculators</h1>
+        </div>
+
+        <div>
+            <div class="service1">
+                <service>
+                    <a href="bmicalculator.html" class="a"><h1 class="titleservices" align="center">BMI Calculator</h1></a>
+                </service>
+            </div>
+            <div class="service2">
+                <service>
+                    <a href="bmrcalculator.html" class="a"><h1 class="titleservices" align="center">BMR Calculator</h1></a>
+                </service>
+            </div>
+            <div class="service3">
+                <service>
+                    <a href="bodyfatcalculator.html" class="a"><h1 class="titleservices" align="center">Body Fat Calculator</h1></a>
+                </service>
+            </div>
+            
+        </div>
+        
+    </header>
+</body>
+
+</html>

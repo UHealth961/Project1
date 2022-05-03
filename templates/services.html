@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='services.css' ) }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="title">U Health</h1>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="/homepage.html#gotoaboutus">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="specialists.html" >Specialists</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+                <li><a href="get-started.html"><img src="{{ url_for('static', filename='register.png' ) }}" width="45px" height="45px"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="header2">
+        <h1 class="servicestitle">Our Services</h1>
+    </div>
+<br><br>
+    <div class="divbutton">
+        <h2>Ready to join us?</h2>
+        <a href="get-started.html">
+            <button type="submit" class="button">Get Started</button>
+        </a>
+    </div>
+
+    <services class="services">
+        <br><br><br>
+        <div class="service1">
+            <service>
+                <h1>My Profile</h1>
+                <p>Create a U Health medical file and enter all your information <br>to get access to our services at any given time.</p>
+            </service>
+        </div>
+        <br><br>
+
+        <div class="service2">
+            <h1>Find A Doctor</h1>
+            <p>Search for any of our experienced doctors and<br> express all your concerns; they are ready to help you.</p>
+            <img src="">
+        </div>
+        <br><br>
+
+        <div class="service3">
+            <h1>Disease Prediction</h1>
+            <p>Tell us what symptoms you are experiencing and we will<br> predict what disease you are suffering from. <br>Your diagnosis is just one click away.</p>
+            <img src="">
+        </div>
+        <br><br>
+
+        <div class="service4">
+            <h1>Health Calculators</h1>
+            <p>Have any inquiries regarding your body? Let us do the job for you!<br> Have a look at your BMI, your calories counter or even <br>your pregnancy due date with our health calculator.</p>
+            <img src="">
+        </div>
+        <br><br>
+
+        <div class="service5">
+            <h1>Emergency Tutorial</h1>
+            <p>Get access to our videos and tutorials for any urgent situation. <br>Just follow the steps and you are ready to go.</p>
+            <img src="">
+        </div>
+
+    </services>
+
+<br><br><br><br><br><br>
+
+    <footer>
+        <div class="titrefooter">
+            <h1 class="h1footer">U Health</h1>
+        </div>
+        <div>
+            <a href="https://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
+            <a href="https://www.twitter.com" class="fa fa-twitter" target="_blank"></a>
+            <a href="https://www.instagram.com/uhealth961?igshid=YmMyMTA2M2Y=" target="_blank" class="fa fa-instagram"></a>
+            <a href="https://www.linkedin.com" target="_blank" class="fa fa-linkedin"></a> 
+            <a href="https://www.youtube.com" target="_blank" class="fa fa-youtube"></a> 
+            <a href="mailto:uhealth961@gmail.com" target="_blank" class="fa fa-google"></a>
+            <a href="tel:+96176898258" target="_blank" class="fa fa-phone"></a>
+        </div>
+        <div>
+            <p align="center" style="font-size: 20px; color: gray;">USJ - ESIB<br>Mar Roukoz Street<br>Mar Roukouz Et Dahr El Hssaine Mount Lebanon, 22245</p>
+            <p align="center" class="pfooter"><em>&copy; Copyright 2022 UHealth</em></p>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>

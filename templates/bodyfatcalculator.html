@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Body Fat Calculator</title>
+</head>
+
+<body>
+
+    <div class="calculator">
+
+        <input type="text" class="display" disabled>
+        <div class="keys">
+            <div class="row">
+                <div class="t0">
+                    <label style="background-color:#00BFFF;">Gender</label>
+                    <br>
+                    <input type="radio" name="fgender" class="fgender" value="male" id="myradio" checked> Male
+                    <input type="radio" class="fgender" name="fgender" value="female" id="myradio"> Female<br>
+                </div>
+                <div id="result"></div>
+            </div>
+            <div class="row">
+                <div class="t1">
+                    <p style="background-color:#00BFFF;">Age (in Years)</p>
+                </div>
+                <input type="number" id="age" placeholder="Age" class="box1">
+            </div>
+            <div class="row">
+                <div class="t">
+                    <p style="background-color:#00BFFF;">Weight (in Kg)</p>
+                </div>
+                <input type="number" id=weight placeholder="Weight" class="box">
+            </div>
+            <div class="row">
+                <div class="t2">
+                    <p style="background-color:#00BFFF;">Height (in cm)</p>
+                </div>
+                <input type="number" id=height placeholder="Height" class="box2">
+            </div>
+            <div class="row">
+                <div class="t3">
+                    <p style="background-color:#00BFFF;">Neck (in cm)</p>
+                </div>
+                <input type="number" id=neck placeholder="Neck" class="box3">
+            </div>
+            <div class="row">
+                <div class="t5">
+                    <p style="background-color:#00BFFF;">Waist (in cm)</p>
+                </div>
+                <input type="number" id=waist placeholder="Waist" class="box4">
+            </div>
+            <div class="row">
+                <div class="t6">
+                    <p style="background-color:#00BFFF;">Hip (in cm)</p>
+                </div>
+                <input type="number" id=hip placeholder="Hip" class="box5">
+            </div>
+            <div class="row">
+                <div class="t4">
+                    <table id="mytable">
+                        <tbody>
+                            <tr>
+                                <td>Description</td>
+                                <td>Women</td>
+                                <td>Men</td>
+                            </tr>
+                            <tr>
+                                <td>Recommended amount</td>
+                                <td>20-25%</td>
+                                <td>8-14%</td>
+                            </tr>
+                            <tr>
+                                <td>Adults in United States, average</td>
+                                <td>22-25%</td>
+                                <td>15-19%</td>
+                            </tr>
+                            <tr>
+                                <td>Obese</td>
+                                <td>30+%</td>
+                                <td>25+%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="b1">
+                    <button value="calculate" class="calculate">Calculate</button>
+                </div>
+
+            </div>
+            <div>
+                <h1 class="h1">Body Fat Calculator</h1>
+                <p class="def">
+                    The Body Fat Calculator can be used to estimate your total body fat based on specific measurements.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+<style>
+    *{
+        background-color: #D5F4FF;
+    }
+    .def{
+        font-size: 22px;
+        color: white;
+        background-color: #00BFFF;
+        position: absolute;
+        top: 100px;
+        left: 950px;
+    }
+    .h1{
+        font-size: 60px;
+        position: absolute;
+        top: 0px;
+        right: 300px;
+        background-color: #00BFFF;
+        color: white;
+    }
+    .calculator{
+        width: 100%;
+        height: 600px;
+        background-color: #00BFFF;
+        position: absolute;
+        top: 150px;
+        z-index: -2;
+    }
+    .t0{
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    background-color: #00BFFF;
+}
+.row{
+    background-color: #00BFFF;
+}
+.t1{
+    font-size: 20px;
+    position: absolute;
+    top: 70px;
+    left: 60px;
+    background-color: #00BFFF;
+}
+.box1{
+    font-size: 20px;
+    position: absolute;
+    top: 87px;
+    left: 210px;
+    background-color: white;
+}
+.t{
+    font-size: 20px;
+    position: absolute;
+    top: 120px;
+    left: 60px;
+    background-color: #00BFFF;
+}
+.box{
+    font-size: 20px;
+    position: absolute;
+    top: 140px;
+    left: 210px;
+    background-color: white;
+}
+.t2{
+    font-size: 20px;
+    position: absolute;
+    top: 170px;
+    left: 60px;
+    background-color: #00BFFF;
+}
+.box2{
+    font-size: 20px;
+    position: absolute;
+    top: 190px;
+    left: 210px;
+    background-color: white;
+}
+.t3{
+    font-size: 20px;
+    position: absolute;
+    top: 220px;
+    left: 60px;
+    background-color: #00BFFF;
+}
+.t5{
+    font-size: 20px;
+    position: absolute;
+    top: 270px;
+    left: 60px;
+    background-color: #00BFFF;
+}
+.t6{
+    font-size: 20px;
+    position: absolute;
+    top: 320px;
+    left: 60px;
+    background-color: #00BFFF;
+}
+.box3{
+    font-size: 20px;
+    position: absolute;
+    top: 240px;
+    left: 210px;
+    background-color: white;
+}
+.box4{
+    font-size: 20px;
+    position: absolute;
+    top: 290px;
+    left: 210px;
+    background-color: white;
+}
+.box5{
+    font-size: 20px;
+    position: absolute;
+    top: 340px;
+    left: 210px;
+    background-color: white;
+}
+table,th,td {
+        border: 1px solid rgb(253, 251, 251);
+        background-color: #00BFFF;
+        
+    }
+#mytable{
+    position: absolute;
+    top: 220px;
+    left: 1150px;
+    font-size: 20px;
+}
+.calculate{
+        width: 300px;
+        height: 60px;
+        background-color: transparent;
+        border: 1.5px solid black;
+        color: black;
+        position: absolute;
+        top: 420px;
+        left: 60px;
+        font-size: 26px;
+    }
+    .display {
+        background-color: #00BFFF;
+        color: black;
+        border: none;
+        text-align: center;
+        font-size: 40px;
+        position: absolute;
+        top: 510px;
+        left: 35px;
+    }
+</style>
+
+<!----
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    body {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(8, 204, 253, 0.836);
+        font-family: sans-serif;
+    }
+    
+    .calculator {
+        width: 100vw;
+        height: 50vh;
+        padding-bottom: 50px;
+        border-radius: 7px;
+        background-color: rgb(8, 204, 253);
+    }
+    
+    table,
+    th,
+    td {
+        border: 1px solid rgb(253, 251, 251);
+    }
+    
+    .display {
+        width: 100%;
+        height: 80px;
+        border: none;
+        box-sizing: border-box;
+        padding: 10px;
+        font-size: 2rem;
+        background-color: rgb(8, 204, 253);
+        color: #000;
+        text-align: right;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+    }
+    
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .box1 {
+        position: absolute;
+        top: 370px;
+        left: 300px;
+        width: 50%;
+        height: 25px;
+    }
+    
+    .box {
+        position: absolute;
+        top: 400px;
+        left: 300px;
+        width: 50%;
+        height: 25px;
+    }
+    
+    .box2 {
+        position: absolute;
+        top: 430px;
+        left: 300px;
+        width: 50%;
+        height: 25px;
+    }
+    
+    .box3 {
+        position: absolute;
+        top: 460px;
+        left: 300px;
+        width: 50%;
+        height: 25px;
+    }
+    
+    .box4 {
+        position: absolute;
+        top: 490px;
+        left: 300px;
+        width: 50%;
+        height: 25px;
+    }
+    
+    .box5 {
+        position: absolute;
+        top: 520px;
+        left: 300px;
+        width: 50%;
+        height: 25px;
+    }
+    
+    .b1 {
+        position: absolute;
+        top: -50px;
+        left: 30px;
+    }
+    
+    .t {
+        position: absolute;
+        top: 400px;
+        left: 30px;
+        color: white;
+        font-size: 110%;
+    }
+    
+    .t1 {
+        position: absolute;
+        top: 370px;
+        left: 30px;
+        color: white;
+        font-size: 110%;
+    }
+    
+    .t2 {
+        position: absolute;
+        top: 430px;
+        left: 30px;
+        color: white;
+        font-size: 110%;
+    }
+    
+    .t3 {
+        position: absolute;
+        top: 460px;
+        left: 30px;
+        color: white;
+        font-size: 110%;
+    }
+    
+    .t5 {
+        position: absolute;
+        top: 490px;
+        left: 30px;
+        color: white;
+        font-size: 110%;
+    }
+    
+    .t6 {
+        position: absolute;
+        top: 520px;
+        left: 30px;
+        color: white;
+        font-size: 110%;
+    }
+    
+    .t4 {
+        position: absolute;
+        top: 400px;
+        left: 1100px;
+        color: white;
+        font-size: 100%;
+    }
+    
+    .t0 {
+        position: absolute;
+        top: 320px;
+        left: 30px;
+        color: white;
+        font-size: 100%;
+    }
+    
+    button {
+        position: absolute;
+        top: 300px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        font-size: 2rem;
+        background-color: #222;
+        color: #fff;
+        margin: 10px;
+    }
+</style>
+--->
+
+<script>
+    const buttons = document.querySelectorAll('button');
+
+    const display = document.querySelector('.display');
+
+    buttons.forEach(function(button) {
+        button.addEventListener('click', calculate);
+    });
+
+
+    function calculate() {
+        let gender = document.getElementById("myradio").value;
+
+        let age = document.getElementById('age').value;
+
+        let weight = document.getElementById('weight').value;
+
+        let height = document.getElementById('height').value;
+
+        let neck = document.getElementById('neck').value;
+
+        let waist = document.getElementById('waist').value
+        let hip = document.getElementById('hip').value;
+
+        let bfp = ''
+
+        if (gender == 'male') {
+            bfp = 495 / (1.0324 - 0.19077 * Math.log10(waist - neck) + 0.15456 * Math.log10(height)) - 450;
+            display.value = `Your body fat is : ${bfp} %`;
+        } else {
+            bfp = 163.205 * Math.log10(math.unit(waist, 'cm').toNumber('in') + math.unit(hip, 'cm').toNumber('in') - math.unit(neck, 'cm').toNumber('in')) - 97.684 * Math.log10(math.unit(height, 'cm').toNumber('in')) - 78.387;
+            display.value = `Your body fat is : ${bfp} %`;
+
+        }
+
+
+
+    }
+</script>
+
+</html>
